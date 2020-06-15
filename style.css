@@ -165,3 +165,21 @@ body {
   padding-left: 25px;
   background-image: url("img/icon-phone.svg");
 }
+
+.container_form{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.message_error{
+    color: #cc0000;
+}
+
+.success_message{
+    color: green;
+}
+
+.block_for_messages{
+    text-align: center;
+}
+
